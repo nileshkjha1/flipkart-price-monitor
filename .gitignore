@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+
+.env
+
+price_history.json
+price_history.csv
+
+demo_price_history.json
+demo_price_history.csv
+
+*.png
