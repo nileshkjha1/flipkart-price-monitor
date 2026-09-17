@@ -350,3 +350,10 @@ git push
 The price monitor checks the current prices of configured Flipkart products and sends an email alert when the target price is reached.
 
 ![Price Monitor Demo](project_demo.png)
+
+## Future Improvements
+
+- Add support for monitoring more e-commerce platforms.
+- Add a web dashboard for viewing price history.
+- Add configurable monitoring intervals.
+- Add support for multiple notification channels.
