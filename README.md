@@ -25,6 +25,8 @@ Can be started automatically through Windows Task Scheduler.
 
 ## 🏗️ Project Architecture
 
+![Project Architecture](architecture_diagram.png)
+
 ``` mermaid
 flowchart TD
     A[Windows Login] --> B[Windows Task Scheduler]
