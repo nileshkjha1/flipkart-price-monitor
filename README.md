@@ -338,3 +338,8 @@ git add README.md .gitignore
 git commit -m "Add project documentation and architecture"
 git push
 ```
+## Project Demo
+
+The price monitor checks the current prices of configured Flipkart products and sends an email alert when the target price is reached.
+
+![Price Monitor Demo](project_demo.png)
