@@ -1,3 +1,8 @@
+![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
+![API](https://img.shields.io/badge/API-ReefAPI-green)
+![Gmail](https://img.shields.io/badge/Email-Gmail-red?logo=gmail)
+![GitHub](https://img.shields.io/badge/GitHub-Repository-black?logo=github)
+
 # 🚀 Flipkart Price Monitoring System
 
 A Python-based price monitoring system that checks Flipkart product
