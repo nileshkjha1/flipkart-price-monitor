@@ -11,8 +11,28 @@ from email.message import EmailMessage
 # SETTINGS
 # ==========================================
 
-# Check every 1 week
-CHECK_INTERVAL = 7 * 24 * 60 * 60
+# Load monitoring interval from config.json
+try:
+    with open("config.json", "r", encoding="utf-8") as file:
+        config = json.load(file)
+
+    check_interval_minutes = float(
+        config.get("check_interval_minutes", 10080)
+    )
+
+    if check_interval_minutes <= 0:
+        raise ValueError("Check interval must be greater than 0.")
+
+    CHECK_INTERVAL = int(check_interval_minutes * 60)
+
+except FileNotFoundError:
+    print("❌ config.json not found.")
+    exit()
+
+except (json.JSONDecodeError, ValueError, TypeError) as error:
+    print("❌ Invalid config.json:")
+    print(error)
+    exit()
 
 SENDER_EMAIL = "nileshkjha2000@gmail.com"
 
@@ -547,8 +567,10 @@ print(
 )
 
 print(
-    "⏱️ Check interval: 1 week"
+    f"⏱️ Check interval: "
+    f"{check_interval_minutes:g} minutes"
 )
+
 
 print()
 
@@ -581,9 +603,10 @@ while True:
     print()
 
     print(
-        "⏳ Waiting 1 week "
-        "for the next check..."
+    f"⏳ Waiting {check_interval_minutes:g} "
+    f"minutes for the next check..."
     )
+    
 
 
     time.sleep(
